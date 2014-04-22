@@ -1,6 +1,6 @@
 class CreateCoursesStudentsJoin < ActiveRecord::Migration
   def change
-    create_table :courses_students do |t|
+    create_table :courses_students, :id => false do |t|
       t.integer "courses_id"
       t.integer "student_id"
     end
