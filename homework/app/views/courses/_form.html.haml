@@ -1,0 +1,6 @@
+= form_for @course do |f|
+  = f.label :name
+  = f.select :name , options_for_select(Course::NAME, include_blank: '--- Select ---'
+  = f.submit
+= link_to "Cancel"
+
