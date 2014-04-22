@@ -1,0 +1,22 @@
+Tables
+======
+
+Locations
+  city_state ["Asheville, NC", "Atlanta, GA", "Austin, TX", "Charleston, SC", "Durham, NC", "Greenville, SC", "Houston, TX", "Spartanburg, SC", "Tampa, FL"]
+
+Courses
+  name ["Rails Engineering", "Front End Engineering", "iOS Engineering"]
+
+Students
+  name
+  email
+  phone
+  picture
+  bio
+  social_1
+  social_2
+  social_3
+
+ADDED
+=====
+Bootstrap CSS, JS and Fonts
