@@ -1,4 +1,4 @@
 TheIronBook
 ===========
 
-Kevin, Chris, Brian
+Kevin, Christopher Cooper, Brian
