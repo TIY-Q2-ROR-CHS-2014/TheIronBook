@@ -17,11 +17,6 @@ Students
   social_2
   social_3
 
-Social Networks
-  name ["GitHub", "Twitter", "LinkedIn", "Facebook", "other"]
-  URL ["https://github.com", "https://twitter.com", "https://linkedin.com", "https://facebook.com"]
-
-
 ADDED
 =====
 Bootstrap CSS, JS and Fonts
