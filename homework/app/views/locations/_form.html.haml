@@ -1,5 +1,7 @@
-= form_for @location do |f|
-  = f.label :city_state
-  = f.select :city_state , options_for_select(Location::CITY_STATES, include_blank: '--- Select ---'
+= form_for @locations do |f|
+  = f.label :city_name
+  = f.text_field :city_name
   = f.submit
 = link_to "Cancel"
+
+/ = f.select :city_state , options_for_select(Location::CITY_STATES, include_blank: '--- Select ---'

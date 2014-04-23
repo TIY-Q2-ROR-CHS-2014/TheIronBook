@@ -1,0 +1,9 @@
+%h1 The Iron Book
+
+=link_to "Create New Location", new_location_path
+%br
+
+-@locations.each do |location|
+  %br
+  = link_to location.city_name, location_path(location)
+  %br
