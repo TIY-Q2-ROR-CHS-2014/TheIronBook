@@ -4,7 +4,6 @@ class CreateStudents < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.string :phone
-      t.attachment :avatar
       t.text :bio
       t.string :social_1
       t.string :social_2
