@@ -1,5 +1,6 @@
 class Course < ActiveRecord::Base
-  # belongs_to :location
+  belongs_to :location
+
   has_many :schedules
   has_many :students, through: :schedules
 
@@ -8,5 +9,4 @@ class Course < ActiveRecord::Base
     'Front End Engineering',
     'iOS Engineering'
   ]
-
 end

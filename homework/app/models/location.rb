@@ -1,5 +1,8 @@
 class Location < ActiveRecord::Base
-  CITY_STATES =  [
+  has_many :students
+  has_many :courses
+
+  CITY_STATE =  [
     'Asheville, NC',
     'Atlanta, GA',
     'Austin, TX',
@@ -10,7 +13,4 @@ class Location < ActiveRecord::Base
     'Spartanburg, SC',
     'Tampa, FL'
   ]
-
-  has_many :students
-  has_many :courses
 end
