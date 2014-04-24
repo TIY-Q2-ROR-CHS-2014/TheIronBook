@@ -1,18 +1,18 @@
 class LocationsController < ApplicationController
 
-    before_filter :find_locations, only: [:show, :edit, :update, :destroy]
+   before_filter :find_location, only:[:show, :edit, :update, :destroy]
 
-
-    def new
-      @locations = Location.new
+  def new
+    @locations = Location.new
   end
 
   def create
-    @locations = Location.create locations_params
+    @locations = Location.create location_params
     redirect_to root_path
   end
 
   def show
+    @courses = @locations.courses
   end
 
   def edit
@@ -25,11 +25,12 @@ class LocationsController < ApplicationController
   end
 
    private
-    def find_locations
-      @locations = Location.find params[:id]
-    end
 
-     def locations_params
-    params.require(:location).permit(:city_name)
-    end  
+   def  location_params
+      params.require(:location).permit(:name)
+   end
+   def find_location
+      @locations = Location.find params[:id]
+   end
+
 end
