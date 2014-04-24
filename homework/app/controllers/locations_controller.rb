@@ -1,8 +1,9 @@
 class LocationsController < ApplicationController
+
    before_filter :find_location, only:[:show, :edit, :update, :destroy]
 
   def new
-      @locations = Location.new
+    @locations = Location.new
   end
 
   def create
@@ -24,10 +25,12 @@ class LocationsController < ApplicationController
   end
 
    private
+
    def  location_params
       params.require(:location).permit(:name)
    end
    def find_location
       @locations = Location.find params[:id]
    end
+
 end
