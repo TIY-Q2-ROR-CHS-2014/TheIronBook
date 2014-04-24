@@ -1,0 +1,14 @@
+
+
+%h1 #{@locations.name}
+
+= link_to "New Course", new_location_course_path(@locations)
+%br
+%hr
+ 
+  -@courses.each do |course|
+    %br
+    =link_to course.name, location_course_path(@locations, @courses)
+%br
+%hr
+= link_to "Back to Locations", root_path
