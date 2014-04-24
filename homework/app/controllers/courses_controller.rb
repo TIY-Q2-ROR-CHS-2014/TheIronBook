@@ -1,13 +1,13 @@
 class CoursesController < ApplicationController
   before_filter :find_location
-  # before_filter :find_course, only:[:show, :edit, :update, :destroy]
+  before_filter :find_course, only:[:show, :edit, :update, :destroy]
 
   def new
-    @courses = @location.courses.new
+    @course = @location.courses.new
   end
 
   def create
-    @courses = @location.courses.create course_params
+    @course = @location.courses.create course_params
     redirect_to location_path(@location)
   end
 
@@ -32,7 +32,8 @@ class CoursesController < ApplicationController
       params.require(:course).permit(:name)
    end
    def find_course
-      @courses = @location.courses.find params[:id]
+    
+      @course = @location.courses.find params[:id]
    end
    
 end

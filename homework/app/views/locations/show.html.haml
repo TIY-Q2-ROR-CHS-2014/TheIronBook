@@ -8,7 +8,7 @@
  
   -@courses.each do |course|
     %br
-    =link_to course.name, location_course_path(@locations, @courses)
+    =link_to course.name, location_course_path(@locations, course)
 %br
 %hr
 = link_to "Back to Locations", root_path
