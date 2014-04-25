@@ -3,7 +3,7 @@ class CoursesController < ApplicationController
   before_filter :find_course, only:[:show, :edit, :update, :destroy]
 
   def new
-    @course = @location.courses.new
+    @course = Course.new
   end
 
   def create
@@ -12,7 +12,6 @@ class CoursesController < ApplicationController
   end
 
   def show
-    # @courses = Course.find params[:id]
   end
 
   def edit
@@ -28,11 +27,10 @@ class CoursesController < ApplicationController
    def find_location
       @location = Location.find params[:location_id]
    end
-   def  course_params
+   def course_params
       params.require(:course).permit(:name)
    end
    def find_course
-    
       @course = @location.courses.find params[:id]
    end
    

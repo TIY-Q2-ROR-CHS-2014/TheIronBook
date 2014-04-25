@@ -11,45 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20140422181804) do
+ActiveRecord::Schema.define(version: 20140425181739) do
 
   create_table "courses", force: true do |t|
-    t.string   "city_name"
-    t.integer  "student_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "location_id"
+  end
+
+  create_table "join_tables", force: true do |t|
+    t.integer  "course_id"
     t.integer  "location_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "locations", force: true do |t|
-    t.string   "city_name"
-=======
-
-ActiveRecord::Schema.define(version: 20140423222708) do
-
-ActiveRecord::Schema.define(version: 20140423132925) do
-
-
-  create_table "courses", force: true do |t|
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-
-    t.integer  "location_id"
-
-  end
-
-  create_table "locations", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "schedules", force: true do |t|
-    t.integer  "courses_id"
-    t.integer  "student_id"
->>>>>>> upstream/master
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -58,20 +37,14 @@ ActiveRecord::Schema.define(version: 20140423132925) do
     t.string   "name"
     t.string   "email"
     t.string   "phone"
-<<<<<<< HEAD
-    t.binary   "picture"
-=======
->>>>>>> upstream/master
     t.text     "bio"
     t.string   "social_1"
     t.string   "social_2"
     t.string   "social_3"
-<<<<<<< HEAD
-    t.integer  "location_id"
-=======
->>>>>>> upstream/master
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "course_id"
+    t.integer  "location_id"
   end
 
 end
