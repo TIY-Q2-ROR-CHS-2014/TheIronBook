@@ -12,6 +12,7 @@ class CoursesController < ApplicationController
   end
 
   def show
+    @student = @course.students
   end
 
   def edit

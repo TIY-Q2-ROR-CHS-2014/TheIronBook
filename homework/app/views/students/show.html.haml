@@ -1,1 +1,18 @@
-= render 'form'
+%h1 #{@student.name}'s Info
+
+/ -@student.each do |student|
+/     %br
+=@student.name
+%br
+=@student.phone
+%br
+=@student.bio
+%br
+=@student.social_1
+%br
+=@student.social_2
+%br
+=@student.social_3
+%br
+%hr
+=link_to "List of Students", location_course_path(@location, @course)
