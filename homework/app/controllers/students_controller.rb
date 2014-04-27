@@ -10,16 +10,20 @@ class StudentsController < ApplicationController
 
   def create
     @student = @course.students.create student_params
-    redirect_to root_path
+    redirect_to location_course_path(@location, @course)
   end
 
   def show
+    # @student = @course.students
   end
 
   def edit
+    # @student = @course.student
   end
 
   def update
+    @student.update_attributes student_params
+    redirect_to location_course_path(@location, @course)
   end
 
   def destroy
@@ -34,6 +38,7 @@ class StudentsController < ApplicationController
         :social_1,
         :social_2,
         :social_3)
+        # :location_id)
     end
 
     def find_location
@@ -41,10 +46,10 @@ class StudentsController < ApplicationController
     end
    
     def find_course
-      @course = @location.courses.find params[:course_id]
+      @course = Course.find params[:course_id]
     end
 
     def find_student
-      @student = @courses.students.find params[:id]
+      @student = Student.find params[:id]
     end
 end

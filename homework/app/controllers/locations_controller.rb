@@ -18,6 +18,7 @@ class LocationsController < ApplicationController
   end
 
   def edit
+    @course = @locations.courses
   end
 
   def update

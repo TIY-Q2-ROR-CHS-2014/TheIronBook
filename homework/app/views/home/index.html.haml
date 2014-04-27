@@ -5,4 +5,6 @@
 - @locations.each do |location|
   %br
   = link_to location.name, location_path(location)
+  |
+  = link_to "Edit", edit_location_path(location)
 

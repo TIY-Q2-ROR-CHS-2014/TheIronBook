@@ -1,4 +1,5 @@
 = form_for [@location, @course, @student] do |f|
+  = f.hidden_field :location_id, value: @location.id
   = f.label :name
   = f.text_field :name
   %br
