@@ -1,3 +1,12 @@
 %h3 Edit Location
 
-= render 'form'
+= form_for @locations do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.submit
+  %br
+  - @course.each do |course|
+    = check_box_tag 'location[course_ids][]', course.id, @course.include?(course), {id: "course_id_#{course.id}"}
+    = label_tag "course_id_#{course.id}", course.name
+=link_to "cancel", root_path
+

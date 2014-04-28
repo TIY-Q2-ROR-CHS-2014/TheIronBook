@@ -37,8 +37,8 @@ class StudentsController < ApplicationController
         :bio,
         :social_1,
         :social_2,
-        :social_3)
-        # :location_id)
+        :social_3,
+        :location_id)
     end
 
     def find_location
