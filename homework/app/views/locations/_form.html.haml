@@ -2,9 +2,11 @@
   = f.label :name
   = f.text_field :name
   = f.submit
-  %br
+  %p
   - @course.each do |course|
     = check_box_tag 'location[course_ids][]', course.id, false, {id: "course_id_#{course.id}"}
     = label_tag "course_id_#{course.id}", course.name
+    %br
 
-=link_to "cancel", root_path
+%p
+= link_to "Return to Home Page", root_path

@@ -1,4 +1,4 @@
-%h1 #{@locations.name} Iron Yard
+%h3 #{@locations.name} Iron Yard
 = link_to "Add Course", new_location_course_path(@locations)
 
 %br
@@ -9,4 +9,6 @@
     =link_to course.name, location_course_path(@locations, course)
 %br
 %hr
-= link_to "Back to Locations", root_path
+
+%p
+= link_to "Return to Home Page", root_path
