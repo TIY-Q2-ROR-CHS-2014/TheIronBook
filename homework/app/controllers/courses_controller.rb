@@ -13,6 +13,7 @@ class CoursesController < ApplicationController
 
   def show
     @student = @course.students
+    #custom query
   end
 
   def edit
