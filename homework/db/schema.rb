@@ -33,6 +33,13 @@ ActiveRecord::Schema.define(version: 20140425181739) do
     t.datetime "updated_at"
   end
 
+  create_table "schedules", force: true do |t|
+    t.integer  "courses_id"
+    t.integer  "student_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "students", force: true do |t|
     t.string   "name"
     t.string   "email"
